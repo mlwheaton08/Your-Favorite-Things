@@ -6,7 +6,8 @@ public class Video_Game
     public string Genre { get; set; }
     public int RatingOf10 { get; set; }
 
-    public void Play()
+
+    public void Play() //doing this method as void to display another way, rather than returning a string and console writing it in program.cs (this is probably a better way actually)
     {
         Console.WriteLine($"Booting up {Name}... Get ready for some {Genre} gaming!");
         Thread.Sleep(2000);

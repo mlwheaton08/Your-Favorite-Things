@@ -5,33 +5,27 @@ public class Shoe
     public string Brand { get; set; }
     public string Type { get; set; }
 
-    public void Purchase()
+    public string Purchase()
     {
-        Console.WriteLine($"Cha-ching. {Type} {Brand} shoes purchased.");
+        return $"Cha-ching. {Type} {Brand} shoes purchased.";
     }
 
-    public void LetsGo()
+    public string LetsGo()
     {
         switch (Type.ToLower())
         {
             case "athletic":
-                Console.WriteLine("Hit the pavement!");
-                break;
+                return "Hit the pavement!";
             case "climbing":
-                Console.WriteLine("Up and at 'em Mr. Honnold!");
-                break;
+                return "Up and at 'em Mr. Honnold!";
             case "dress":
-                Console.WriteLine("Dress to impress!");
-                break;
+                return "Dress to impress!";
             case "lounge":
-                Console.WriteLine("Nothing like a comfy shoe.");
-                break;
+                return "Nothing like a comfy shoe.";
             case "boot":
-                Console.WriteLine("Git er donneee.");
-                break;
+                return "Git er donneee.";
             default:
-                Console.WriteLine("Put shoe on.");
-                break;
+                return "Put shoe on.";
         }
     }
 }

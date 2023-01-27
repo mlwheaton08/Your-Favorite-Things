@@ -6,30 +6,25 @@ public class Cymbal
     public string Type { get; set; }
     public int SizeIn { get; set; }
 
-    public void Play()
+    public string Play()
     {
         switch (Type.ToLower())
         {
             case "crash":
-                Console.WriteLine("CRASH!!!");
-                break;
+                return "CRASH!!!";
             case "hi-hats":
-                Console.WriteLine("chick.");
-                break;
+                return  "chick.";
             case "ride":
-                Console.WriteLine("ting...");
-                break;
+                return  "ting...";
             case "effect":
-                Console.WriteLine("chshh");
-                break;
+                return  "chshh";
             default:
-                Console.WriteLine("(generic cymbal sound)");
-                break;
+                return "(generic cymbal sound)";
         }
     }
 
-    public void DisplayInfo()
+    public string DisplayInfo()
     {
-        Console.WriteLine($"Brand: {Brand}, Type: {Type}, Size: {SizeIn}in");
+        return $"Brand: {Brand}, Type: {Type}, Size: {SizeIn}in";
     }
 }
